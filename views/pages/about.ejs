@@ -1,1 +1,11 @@
 <h1>About Us</h1>
+<%- include('header.ejs') %>
+<p><%= orgBio.info %></p>
+<h2>Meet the Team</h2>
+<% team.forEach(member => { %>
+
+    <h3 class = 'team-member'><%= member.name %> <%= member.surname %></h3>
+    <img src="<%= member.image %>" alt="">
+    <p class = 'member-bio'><%= member.bio %></p>
+
+<% }) %>
