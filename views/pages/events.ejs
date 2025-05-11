@@ -1,2 +1,24 @@
-<h1>Upcoming Events</h1>
-<p>Check out what's happening soon!</p>
+    <h1 class="pageheadings">Upcoming Events</h1>
+    <%- include('header.ejs') %>
+    <ul class="events-list">
+    <% events.forEach(event => { %>
+        <li class="event-item">
+            <img src="<%= event.image %>" alt="<%= event.title %>">
+            <h3><%= event.title %></h3>
+            <h4>Date: <%= event.date %></h4>
+            <h4>Location: <%= event.location %></h4>
+
+            <div class="event-overlay">
+                <h5><%= event.title %></h5>
+                <p>Date: <%= event.date %></p>
+                <p>Location: <%= event.location %></p>
+                <% if (event.description) { %>
+                    <p><%= event.description %></p>
+                <% } else { %>
+                    <p>More details coming soon...</p>
+                <% } %>
+                </div>
+        </li>
+    <% }); %>
+    </ul>
+    <%- include('footer.ejs') %>

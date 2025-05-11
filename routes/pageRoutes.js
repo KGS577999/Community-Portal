@@ -5,11 +5,11 @@ const router = express.Router();
 
 // Placeholder events array for home page
 const events = [
-    { title: "Music Festival", date: "2025-05-12", location: "City Park", image: "music.jpg" },
-    { title: "Tech Conference", date: "2025-05-20", location: "Convention Center", image: "tech.jpg" },
-    { title: "Food Market", date: "2025-05-14", location: "Downtown", image: "food.jpg" },
-    { title: "Gaming Tournament", date: "2025-05-15", location: "Esports Arena", image: "gaming.jpg" },
-    { title: "Charity Fundraiser Gala", date: "2025-05-17", location: "Grand Hotel Ballroom", image: "charity.jpg" },
+    { title: "Music Festival", date: "2025-05-12", location: "City Park", image: "images/music-festival.jpg" },
+    { title: "Tech Conference", date: "2025-05-20", location: "Convention Center", image: "images/tech-conference.png" },
+    { title: "Food Market", date: "2025-05-14", location: "Downtown", image: "images/food-market.png" },
+    { title: "Gaming Tournament", date: "2025-05-15", location: "Esports Arena", image: "images/gaming-tournament.png" },
+    { title: "Charity Fundraiser Gala", date: "2025-05-17", location: "Grand Hotel Ballroom", image: "images/gala.png" },
     { title: "Neighborhood Meetup", date: "2025-05-16", location: "Community Center", image: "meetup.jpg" },
     { title: "Cultural Festival", date: "2025-05-18", location: "Central Plaza", image: "culture.jpg" },
     { title: "Outdoor Movie Night", date: "2025-05-13", location: "Riverside Park", image: "movie.jpg" },
@@ -65,10 +65,12 @@ router.get('/about', (req, res) => {
     res.render('pages/about', {team, orgBio})
 });
 
+// Events Page
 router.get('/events', (req, res) => {
-    res.render('pages/events')
+    res.render('pages/events', {events: events})
 });
 
+// Contact Page
 router.get('/contact', (req, res) => {
     res.render('pages/contact')
 });
