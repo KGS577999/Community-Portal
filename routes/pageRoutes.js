@@ -3,10 +3,53 @@
 const express = require('express');
 const router = express.Router();
 
+// Placeholder events array for home page
+const events = [
+    { title: "Music Festival", date: "2025-05-12", location: "City Park", image: "music.jpg" },
+    { title: "Tech Conference", date: "2025-05-20", location: "Convention Center", image: "tech.jpg" },
+    { title: "Food Market", date: "2025-05-14", location: "Downtown", image: "food.jpg" },
+    { title: "Gaming Tournament", date: "2025-05-15", location: "Esports Arena", image: "gaming.jpg" },
+    { title: "Charity Fundraiser Gala", date: "2025-05-17", location: "Grand Hotel Ballroom", image: "charity.jpg" },
+    { title: "Neighborhood Meetup", date: "2025-05-16", location: "Community Center", image: "meetup.jpg" },
+    { title: "Cultural Festival", date: "2025-05-18", location: "Central Plaza", image: "culture.jpg" },
+    { title: "Outdoor Movie Night", date: "2025-05-13", location: "Riverside Park", image: "movie.jpg" },
+    { title: "Startup Pitch Event", date: "2025-05-19", location: "Innovation Hub", image: "startup.jpg" },
+    { title: "Art Exhibition", date: "2025-05-21", location: "Modern Art Museum", image: "art.jpg" },
+    { title: "Sports Marathon", date: "2025-05-11", location: "City Stadium", image: "marathon.jpg" }
+];
+
+// Home Page
 router.get('/', (req, res) => {
-    res.render('pages/home')
+
+    // Gets Todays Date
+    const today = new Date();
+
+    // Gets the date one week from now
+    const oneWeekFromNow = new Date();
+    oneWeekFromNow.setDate(today.getDate() + 7);
+
+    // Filters out the events array; only collecting the events happening within a week from today
+    const upcomingEvents = events.filter(event => {
+        const eventDate = new Date(event.date);
+        return eventDate >= today && eventDate <= oneWeekFromNow;
+    });
+
+    // Sorts the new array by date
+    const sortedUpcomingEvents = upcomingEvents.sort((a, b) => new Date(a.date) - new Date(b.date));
+
+    // Data being sent to page to display
+    const homeData = {
+        eventsTitle: "Upcoming Events",
+
+        welcomeMessage: "Welcome to your Local Community Hub, your go-to place for staying connected with everything happening in our vibrant community! Whether you're looking to discover exciting events, meet new people, or take part in meaningful initiatives, we've got you covered. Join us in building friendships, celebrating diverse interests, and making a real impact together. Stay updated, get involved, and be part of the experiences that make our community thrive!",
+
+        sortedUpcomingEvents
+    }
+
+    res.render('pages/home', {homeData})
 });
 
+// About Page
 router.get('/about', (req, res) => {
     const team = [
         {name: 'Kyle', surname: 'Smith', bio: 'Kyle is passionate about the gaming community and oversees all gaming tournaments. He organizes events, manages registrations, and ensures fair play across all competitions.', image: '/images/pfp1.png'},

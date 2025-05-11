@@ -30,7 +30,7 @@ nav a:hover {
     font-size: 40px;
 }
 
-#orgBio{
+#orgBio, #welcomeMessage{
     max-width: 80%;
     margin: 15px auto 0px;
     font-size: 20px;
@@ -74,4 +74,40 @@ nav a:hover {
     font-size: 19px;
     color: #555;
     line-height: 1.6;
+}
+
+.events-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin-left: 2%;
+    margin-right: 2%;
+    background: linear-gradient(45deg, #1abc9c, #2c3e50);
+    gap: 1%;
+    border-radius: 10px;
+}
+
+.left-sideEvent {
+    width: 48%;
+    text-align: center;
+    color: white;
+}
+
+.right-sideEvent {
+    width: 48%;
+    text-align: center;
+    color: white;
+}
+
+.left-sideEvent, .right-sideEvent {
+    line-height: 0.6;
+    font-size: 19px;
+}
+
+#eventsTitle{
+    font-size: 30px;
+    margin-bottom: 16px;
+    margin-left: 1%;
+    color: #2c3e50;
+    text-decoration: underline;
 }

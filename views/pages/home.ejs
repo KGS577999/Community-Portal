@@ -2,11 +2,31 @@
 
 <%- include('header.ejs') %>
 
-<p>We are glad to have you here. Stay tuned for exciting upcoming events.</p>
+<p id="welcomeMessage"><%= homeData.welcomeMessage %></p>
 
-<div id="events">
-    <h2>Upcoming Events</h2>
-
+<div>
+    <h2 id="eventsTitle"><%= homeData.eventsTitle %></h2>
+    <div class="events-container">
+        <% homeData.sortedUpcomingEvents.forEach((event, index) => { %>
+            <% if (index % 2 != 1) { %>
+                <div class="left-sideEvent">
+                    <h3><%= event.title %></h3>
+                    <p>Date: <%= event.date%></p>
+                    <p>Location: <%= event.location %></p>
+                    <p><%= event.description %></p>
+                    <img src="" alt="">
+                </div>
+            <% } else { %>
+                <div class="right-sideEvent">
+                    <h3><%= event.title %></h3>
+                    <p>Date: <%= event.date%></p>
+                    <p>Location: <%= event.location %></p>
+                    <p><%= event.description %></p>
+                    <img src="" alt="">
+                </div>
+            <% } %>
+        <% }) %>
+    </div>
 </div>
 
 <%- include('footer.ejs') %>
