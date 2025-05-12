@@ -3,6 +3,10 @@
 const express = require('express');
 const router = express.Router();
 
+var bodyParser = require('body-parser');
+
+var urlencodedParser = bodyParser.urlencoded({ extended: false });
+
 // Placeholder events array for home page
 const events = [
     { title: "Music Festival", date: "2025-05-12", location: "City Park", image: "images/music-festival.jpg" },
@@ -73,6 +77,10 @@ router.get('/events', (req, res) => {
 // Contact Page
 router.get('/contact', (req, res) => {
     res.render('pages/contact')
+});
+router.post('/contact', urlencodedParser, (req,res) => {
+    console.log(req.body);
+    res.render('pages/thankyou', { data: req.body })
 });
 
 router.get('/thankyou', (req, res) => {
