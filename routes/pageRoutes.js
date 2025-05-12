@@ -79,7 +79,6 @@ router.get('/contact', (req, res) => {
     res.render('pages/contact')
 });
 router.post('/contact', urlencodedParser, (req,res) => {
-    console.log(req.body);
     res.render('pages/thankyou', { data: req.body })
 });
 
