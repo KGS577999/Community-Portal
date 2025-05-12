@@ -2,10 +2,23 @@
 
 ## Overview
 
-Starter boilerplate for a Node.js + Express + EJS website.
+coming soon...
 
-## Instructions
+## Tech used
 
-1. Run `npm install` to install dependencies.
-2. Use `npm run dev` to start the development server with nodemon.
-3. Add your own route handlers and middleware as needed.
+coming soon...
+
+## Team members and roles
+
+Tiaan Dorfling 578128       | - Events page, Contact page, Thank you page, dark-mode ,css for previous pages, mostly backend
+Kyle Gregory Smith 577999   | - home page, about page, styling and frontend
+
+## Setup instruction
+
+npm run dev to run nodemon app,
+npm start to run node app
+
+
+
+
+
