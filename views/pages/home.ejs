@@ -14,7 +14,7 @@
                     <p>Date: <%= event.date%></p>
                     <p>Location: <%= event.location %></p>
                     <p><%= event.description %></p>
-                    <img src="" alt="">
+                    <img src="<%= event.image %>" alt="">
                 </div>
             <% } else { %>
                 <div class="right-sideEvent">
@@ -22,7 +22,7 @@
                     <p>Date: <%= event.date%></p>
                     <p>Location: <%= event.location %></p>
                     <p><%= event.description %></p>
-                    <img src="" alt="">
+                    <img src="<%= event.image %>" alt="">
                 </div>
             <% } %>
         <% }) %>

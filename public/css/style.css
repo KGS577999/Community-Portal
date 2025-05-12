@@ -100,6 +100,12 @@ nav a:hover {
     color: white;
 }
 
+.right-sideEvent img, .left-sideEvent img{
+    width: 250px;
+    height: 200px;
+    padding-bottom: 15px;
+}
+
 .left-sideEvent, .right-sideEvent {
     line-height: 0.6;
     font-size: 19px;
