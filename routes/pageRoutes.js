@@ -2,6 +2,7 @@
 
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
 var bodyParser = require('body-parser');
 
@@ -21,6 +22,9 @@ const events = [
     { title: "Art Exhibition", date: "2025-05-21", location: "Modern Art Museum", image: "art.jpg" },
     { title: "Sports Marathon", date: "2025-05-11", location: "City Stadium", image: "marathon.jpg" }
 ];
+
+let users = [];
+
 
 // Home Page
 router.get('/', (req, res) => {
@@ -76,14 +80,14 @@ router.get('/events', (req, res) => {
 
 // Contact Page
 router.get('/contact', (req, res) => {
-    res.render('pages/contact')
+    res.render('pages/contact');
 });
 router.post('/contact', urlencodedParser, (req,res) => {
-    res.render('pages/thankyou', { data: req.body })
-});
-
-router.get('/thankyou', (req, res) => {
-    res.render('pages/contact')
+    users.push(req.body);
+    res.render('pages/thankyou', { data: req.body });
+    users.forEach(function(user) {
+    console.log(user.name);
+    });
 });
 
 module.exports = router;
