@@ -10,19 +10,20 @@ var urlencodedParser = bodyParser.urlencoded({ extended: false });
 
 // Placeholder events array for home page
 const events = [
-    { title: "Music Festival", date: "2025-05-12", location: "City Park", image: "images/music-festival.jpg" },
-    { title: "Tech Conference", date: "2025-05-20", location: "Convention Center", image: "images/tech-conference.png" },
-    { title: "Food Market", date: "2025-05-14", location: "Downtown", image: "images/food-market.png" },
-    { title: "Gaming Tournament", date: "2025-05-15", location: "Esports Arena", image: "images/gaming-tournament.png" },
-    { title: "Charity Fundraiser Gala", date: "2025-05-17", location: "Grand Hotel Ballroom", image: "images/gala.png" },
-    { title: "Neighborhood Meetup", date: "2025-05-16", location: "Community Center", image: "meetup.jpg" },
-    { title: "Cultural Festival", date: "2025-05-18", location: "Central Plaza", image: "culture.jpg" },
-    { title: "Outdoor Movie Night", date: "2025-05-13", location: "Riverside Park", image: "movie.jpg" },
-    { title: "Startup Pitch Event", date: "2025-05-19", location: "Innovation Hub", image: "startup.jpg" },
-    { title: "Art Exhibition", date: "2025-05-21", location: "Modern Art Museum", image: "art.jpg" },
-    { title: "Sports Marathon", date: "2025-05-11", location: "City Stadium", image: "marathon.jpg" }
+    { title: "Music Festival", date: "2025-05-12", location: "City Park", image: "images/music-festival.jpg", desc: "A audible masterpiece that is certain to rock your world!" },
+    { title: "Tech Conference", date: "2025-05-20", location: "Convention Center", image: "images/tech-conference.png", desc: "The modest conference of tech in Centurion" },
+    { title: "Food Market", date: "2025-05-14", location: "Downtown", image: "images/food-market.png", desc: "A grade fruits and more available only here!"  },
+    { title: "Gaming Tournament", date: "2025-05-15", location: "Esports Arena", image: "images/gaming-tournament.png", desc: "Where the boere come to show that they don't just smell grass!"  },
+    { title: "Charity Fundraiser Gala", date: "2025-05-17", location: "Grand Hotel Ballroom", image: "images/gala.png", desc: "Come through your hard earned money towards a great cause I guess."  },
+    { title: "Neighborhood Meetup", date: "2025-05-16", location: "Community Center", image: "images/neighbourhood-meetup.png", desc: "We all know IT students need to get out more..."  },
+    { title: "Cultural Festival", date: "2025-05-18", location: "Central Plaza", image: "images/culture.png", desc: "Who does not care about culture?"  },
+    { title: "Art Exhibition", date: "2025-05-21", location: "Modern Art Museum", image: "images/art.png", desc: "We have the AI Van Gogh on show"  },
+    { title: "Startup Pitch Event", date: "2025-05-19", location: "Innovation Hub", image: "images/startup.png", desc: "Come pitch your best ideas to hungry hungry sharks, I mean investors..."  },
+    { title: "Outdoor Movie Night", date: "2025-05-13", location: "Riverside Park", image: "images/movie.jpg", desc: "Come watch shrek 2 with the homies in Ben's garden."  },
+    { title: "Sports Marathon", date: "2025-05-11", location: "City Stadium", image: "images/marathon.jpg", desc: "A good way to remember that coding is not the hardest feat in the world."  }
 ];
 
+//in-memory array to store contacts
 let users = [];
 
 
@@ -85,6 +86,9 @@ router.get('/contact', (req, res) => {
 router.post('/contact', urlencodedParser, (req,res) => {
     users.push(req.body);
     res.render('pages/thankyou', { data: req.body });
+    /*
+    this is to show for testing purposes that it works
+    */
     users.forEach(function(user) {
     console.log(user.name);
     });
