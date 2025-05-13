@@ -5,8 +5,10 @@
     <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
+    <%- include('../partials/header.ejs') %>
+    <br>
         <h1 class="pageheadings">Contact Us</h1>
-        <%- include('../partials/header.ejs') %>
+        
         <form method="POST" action="/contact" class="input-form">
             <div>
                 <label for="name">Your Name:</label><br />
