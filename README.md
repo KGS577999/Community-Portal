@@ -8,7 +8,11 @@ The homepage serves as a central hub for the community, welcoming visitors with 
 About Page Overview:
 The About Us page provides an overview of the organization and introduces its community team in a structured layout. It begins with a shared header and a dynamically generated organization bio, ensuring that any updates are reflected automatically. The team section highlights each member's name, surname, profile picture, and brief personal bio, all sourced dynamically from an array. This setup allows for easy content management, keeping the page up to date without requiring that much manual edits.
 
+About Header Overview:
+The Header is used as a navigation bar and connects links to the Home, Events, About and Contact page for users to navigate freely, it also contains a dark mode setting to switch the css styling to a darker colour pallete for users comfort.
 
+About Footer Overview:
+The footer is utilized to provide links to the community hub social medias, to keep users involved and informed of any future events.
 ## Tech used
 
 coming soon...
