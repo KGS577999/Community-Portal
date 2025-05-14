@@ -17,7 +17,11 @@ The Contact page provides a direct channel for visitors to reach out. It begins 
 Thank You Page Overview:
 Upon successful submission of the contact form, users are likely redirected to a "Thank You" page. This page typically confirms that their message has been received. It includes a thank you message, information about expected response times.
 
+About Header Overview:
+The Header is used as a navigation bar and connects links to the Home, Events, About and Contact page for users to navigate freely, it also contains a dark mode setting to switch the css styling to a darker colour pallete for users comfort.
 
+About Footer Overview:
+The footer is utilized to provide links to the community hub social medias, to keep users involved and informed of any future events.
 ## Tech used
 
 - HTML (HyperText Markup Language): Used for structuring the content and layout of each webpage, including text, images, forms, and lists.
