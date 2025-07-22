@@ -1,4 +1,13 @@
 # Community Portal Project
+<br> <h1>Home Page</h1> <br>
+<img width="1903" height="605" alt="image" src="https://github.com/user-attachments/assets/db3ab3e1-11d8-4b40-804a-3502378a0a90" />
+<br> <h1>About Page</h1> <br>
+<img width="1873" height="940" alt="image" src="https://github.com/user-attachments/assets/72a184e4-1f9d-46ab-9d3b-a10e865aed72" />
+<br> <h1>About Page</h1> <br>
+<img width="1878" height="873" alt="image" src="https://github.com/user-attachments/assets/fee60e4b-1c9a-4077-b6c7-1c2cabc249e6" />
+<br> <h1>Contact Page</h1> <br>
+<img width="1880" height="914" alt="image" src="https://github.com/user-attachments/assets/d8dbf5d8-492e-4b04-ad27-77f446cc7167" />
+
 
 ## Overview
 
